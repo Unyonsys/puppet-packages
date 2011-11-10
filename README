@@ -14,8 +14,8 @@ In the end, this package declares virtual pakcage statement resources.
 Dependencies
 ------------
 
-* Stdlib
-* Concat
+* Stdlib git://github.com/puppetlabs/puppetlabs-stdlib.git
+* Concat git://github.com/puppet-modules/puppet-concat.git
 
 Contact
 -------
