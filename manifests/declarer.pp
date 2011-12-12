@@ -1,8 +1,8 @@
 define packages::declarer() {
-  if ! $packages::packageshash[$name]['pkgname'] {
+  if ! $packages::packageshash[$name] {
     $pkgname = $name
   } else {
-    $pkgname = $packages::packageshash[$name]['pkgname']
+    $pkgname = $packages::packageshash[$name]
   }
   
   @package { $name:
