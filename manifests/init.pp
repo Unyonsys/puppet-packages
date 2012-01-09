@@ -27,6 +27,7 @@ class packages {
     'php-pear'                 => $php-pear,
     'php5'                     => $php5,
     'php5-cli'                 => $php5-cli,
+    'php5-curl'                => $php5-curl,
     'php5-gd'                  => $php5-gd,
     'php5-mcrypt'              => $php5-mcrypt,
     'php5-mysql'               => $php5-mysql,
