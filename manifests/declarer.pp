@@ -4,7 +4,7 @@ define packages::declarer() {
   } else {
     $pkgname = $packages::packageshash[$name]
   }
-  
+
   @package { $name:
     ensure  => present,
     name    => $pkgname,
