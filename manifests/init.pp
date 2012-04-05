@@ -1,16 +1,40 @@
 class packages {
-  if $::lsbdistid in [ 'CentOS', 'RedHatEnterpriseServer' ] {
-    $libdbd_mysql_perl  = 'perl-DBD-MySQL'
-    $libdbi_perl        = 'libdbi-dbd-mysql'
-    $phpmssql           = 'php-mssql'
-    $phpxml             = 'php-xml'
-    $python_memcache    = 'python-memcached'
-    $sysvinit_utils     = 'sysvinit-tools'
-  } else {
-    $libactiverecord_ruby = 'libactiverecord-ruby'
-    $libmysql_ruby        = 'libmysql-ruby'
-    $phpmssql             = 'php5-sybase'
-    $phpxml               = 'php5-xml'
+  case $::osfamily {
+    'RedHat': {
+      $libdbd_mysql_perl  = 'perl-DBD-MySQL'
+      $libdbi_perl        = 'libdbi-dbd-mysql'
+      $phpmssql           = 'php-mssql'
+      $phpxml             = 'php-xml'
+      $php5_cli           = 'php-cli'
+      $php5_curl          = 'php'
+      $php5               = 'php'
+      $php5_gd            = 'php-gd'
+      $php5_pear          = 'php-pear'
+      $php5_mcrypt        = 'php-mcrypt'
+      $php5_mysql         = 'php-mysql'
+      $python_memcache    = 'python-memcached'
+      $sysvinit_utils     = 'sysvinit-tools'
+      $rails              = undef
+      $sysstat            = 'sysstat'
+    }
+    'Debian': {
+      $libactiverecord_ruby = 'libactiverecord-ruby'
+      $libmysql_ruby        = 'libmysql-ruby'
+      $phpmssql             = 'php5-sybase'
+      $phpxml               = 'php5-xml'
+      $php5_cli             = 'php5-cli'
+      $php5_curl            = 'php5-curl'
+      $php5                 = 'php5'
+      $php5_gd              = 'php5-gd'
+      $php5_pear            = 'php5-pear'
+      $php5_mcrypt          = 'php5-mcrypt'
+      $php5_mysql           = 'php5-mysql'
+      $rails                = 'rails'
+      $sysstat              = 'sysstat'
+    }
+    default: {
+      fail('Unsupported osfamily')
+    }
   }
 
   $packageshash = {
@@ -22,14 +46,14 @@ class packages {
     'libdbd-mysql-perl'        => $libdbd_mysql_perl,
     'libdbi-perl'              => $libdbi_perl,
     'libmysql-ruby'            => $libmysql_ruby,
-    'php-cli'                  => $php_cli,
-    'php-pear'                 => $php_pear,
+    'php-cli'                  => $php5_cli,
+    'php-pear'                 => $php5_pear,
     'php5'                     => $php5,
-    'php5-cli'                 => $php5-cli,
-    'php5-curl'                => $php5-curl,
-    'php5-gd'                  => $php5-gd,
-    'php5-mcrypt'              => $php5-mcrypt,
-    'php5-mysql'               => $php5-mysql,
+    'php5-cli'                 => $php5_cli,
+    'php5-curl'                => $php5_curl,
+    'php5-gd'                  => $php5_gd,
+    'php5-mcrypt'              => $php5_mcrypt,
+    'php5-mysql'               => $php5_mysql,
     'python-memcache'          => $python_memcache,
     'rails'                    => $rails,
     'sysstat'                  => $sysstat,
