@@ -1,7 +1,8 @@
 class packages {
-  if $::lsbdistid in [ 'CentOS', 'RedHatEnterpriseServer' ] {
+  if $::osfamily in [ 'RedHat' ] {
     $libdbd_mysql_perl  = 'perl-DBD-MySQL'
     $libdbi_perl        = 'libdbi-dbd-mysql'
+    $libwww_perl        = 'perl-libwww-perl'
     $phpmssql           = 'php-mssql'
     $phpxml             = 'php-xml'
     $python_memcache    = 'python-memcached'
@@ -9,6 +10,7 @@ class packages {
   } else {
     $libactiverecord_ruby = 'libactiverecord-ruby'
     $libmysql_ruby        = 'libmysql-ruby'
+    $libwww_perl          = 'libwww-perl'
     $phpmssql             = 'php5-sybase'
     $phpxml               = 'php5-xml'
   }
@@ -22,6 +24,7 @@ class packages {
     'libdbd-mysql-perl'        => $libdbd_mysql_perl,
     'libdbi-perl'              => $libdbi_perl,
     'libmysql-ruby'            => $libmysql_ruby,
+    'libwww-perl'              => $libwww_perl,
     'php-cli'                  => $php_cli,
     'php-pear'                 => $php_pear,
     'php5'                     => $php5,
