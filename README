@@ -15,7 +15,6 @@ Dependencies
 ------------
 
 * Stdlib git://github.com/puppetlabs/puppetlabs-stdlib.git
-* Concat git://github.com/ripienaar/puppet-concat.git
 
 Contact
 -------
