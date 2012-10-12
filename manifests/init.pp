@@ -1,18 +1,29 @@
 class packages {
-  if $::osfamily in [ 'RedHat' ] {
-    $libdbd_mysql_perl  = 'perl-DBD-MySQL'
-    $libdbi_perl        = 'libdbi-dbd-mysql'
-    $libwww_perl        = 'perl-libwww-perl'
-    $phpmssql           = 'php-mssql'
-    $phpxml             = 'php-xml'
-    $python_memcache    = 'python-memcached'
-    $sysvinit_utils     = 'sysvinit-tools'
-  } else {
-    $libactiverecord_ruby = 'libactiverecord-ruby'
-    $libmysql_ruby        = 'libmysql-ruby'
-    $libwww_perl          = 'libwww-perl'
-    $phpmssql             = 'php5-sybase'
-    $phpxml               = 'php5-xml'
+  case $::osfamily {
+    'RedHat': {
+      $libdbd_mysql_perl  = 'perl-DBD-MySQL'
+      $libdbi_perl        = 'libdbi-dbd-mysql'
+      $libwww_perl        = 'perl-libwww-perl'
+      $phpmssql           = 'php-mssql'
+      $php_xml            = 'php-xml'
+      $php5_cli           = 'php-cli'
+      $php5_curl          = 'php'
+      $php5               = 'php'
+      $php5_gd            = 'php-gd'
+      $php5_pear          = 'php-pear'
+      $php5_mcrypt        = 'php-mcrypt'
+      $php5_mysql         = 'php-mysql'
+      $python_memcache    = 'python-memcached'
+      $sysvinit_utils     = 'sysvinit-tools'
+      $rails              = undef
+      $sysstat            = 'sysstat'
+    }
+    'Debian': {
+      $php_xml              = 'php5'
+    }
+    default: {
+      fail('Unsupported osfamily')
+    }
   }
 
   $packageshash = {
@@ -25,8 +36,7 @@ class packages {
     'libdbi-perl'              => $libdbi_perl,
     'libmysql-ruby'            => $libmysql_ruby,
     'libwww-perl'              => $libwww_perl,
-    'php-cli'                  => $php_cli,
-    'php-pear'                 => $php_pear,
+    'php5-pear'                => $php5_pear,
     'php5'                     => $php5,
     'php5-cli'                 => $php5_cli,
     'php5-curl'                => $php5_curl,
@@ -45,4 +55,3 @@ class packages {
   #Call the define with the generated array
   packages::declarer { $keys : }
 }
-
