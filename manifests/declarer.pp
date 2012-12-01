@@ -5,8 +5,10 @@ define packages::declarer() {
     $pkgname = $packages::packageshash[$name]
   }
 
-  @package { $name:
-    ensure  => present,
-    name    => $pkgname,
+  if ! defined(Package[$name]) {
+    @package { $name:
+      ensure  => present,
+      name    => $pkgname,
+    }
   }
 }

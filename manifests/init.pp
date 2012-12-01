@@ -7,7 +7,6 @@ class packages {
       $phpmssql           = 'php-mssql'
       $php_xml            = 'php-xml'
       $php5_cli           = 'php-cli'
-      $php5_curl          = 'php'
       $php5               = 'php'
       $php5_gd            = 'php-gd'
       $php5_pear          = 'php-pear'
