@@ -34,6 +34,8 @@ class packages {
     'libdbd-mysql-perl'        => $libdbd_mysql_perl,
     'libdbi-perl'              => $libdbi_perl,
     'libmysql-ruby'            => $libmysql_ruby,
+    'libnet-ldap-perl'         => $libnet_ldap_perl,
+    'libdate-manip-perl'       => $libdate_manip_perl,
     'libwww-perl'              => $libwww_perl,
     'php5-pear'                => $php5_pear,
     'php5'                     => $php5,
