@@ -27,6 +27,7 @@ class packages {
 
   $packageshash = {
     'libactiverecord-ruby'     => $libactiverecord_ruby,
+    'libapache2-mod-fastcgi'   => $libapache2_mod_fastcgi,
     'libapache2-mod-jk'        => $libapache2_mod_jk,
     'libapache2-mod-passenger' => $libapache2_mod_passenger,
     'libapache2-mod-php5'      => $libapache2_mod_php5,
