@@ -44,6 +44,7 @@ class packages {
     'php5-cli'                 => $php5_cli,
     'php5-curl'                => $php5_curl,
     'php5-gd'                  => $php5_gd,
+    'php5-intl'                => $php5_intl,
     'php5-mcrypt'              => $php5_mcrypt,
     'php5-mysql'               => $php5_mysql,
     'python-memcache'          => $python_memcache,
