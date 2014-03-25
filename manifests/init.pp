@@ -38,6 +38,7 @@ class packages {
     'libnet-ldap-perl'         => $libnet_ldap_perl,
     'libdate-manip-perl'       => $libdate_manip_perl,
     'libwww-perl'              => $libwww_perl,
+    'php-xml-parser'           => $php_xml_parser,
     'php5-pear'                => $php5_pear,
     'php5'                     => $php5,
     'php5-cli'                 => $php5_cli,
