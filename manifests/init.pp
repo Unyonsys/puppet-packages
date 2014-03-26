@@ -1,3 +1,21 @@
+# == Class packages
+#
+# This class is used to install packages which cannot be bound to specific modules.
+# Puppet resource being unique, we need one place to declare packages potentially used
+# in different places.
+# It will mostly contain libraries which might be used by multiple modules.
+#
+# The name we use as the package reference name is the Debian/Ubuntu like name.
+# 
+# === Contact
+#
+# Bruno Leon <bruno.leon@unyonsys.com>
+#
+# === Copyright
+# 
+# Copyright (C) 2011 Savoir-faire Linux Inc.
+# Copyright (C) 2012-2014 Unyonsys SARL
+#
 class packages {
   case $::osfamily {
     'RedHat': {
@@ -45,6 +63,7 @@ class packages {
     'php5-curl'                => $php5_curl,
     'php5-gd'                  => $php5_gd,
     'php5-intl'                => $php5_intl,
+    'php5-ldap'                => $php5_ldap,
     'php5-mcrypt'              => $php5_mcrypt,
     'php5-mysql'               => $php5_mysql,
     'python-memcache'          => $python_memcache,
