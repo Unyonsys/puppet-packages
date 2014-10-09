@@ -67,6 +67,8 @@ class packages {
     'php5-mcrypt'              => $php5_mcrypt,
     'php5-mysql'               => $php5_mysql,
     'python-memcache'          => $python_memcache,
+    'python-pip'               => $python_pip,
+    'python-setuptools'        => $python_setuptools,
     'rails'                    => $rails,
     'sysstat'                  => $sysstat,
     'sysvinit-utils'           => $sysvinit_utils,
