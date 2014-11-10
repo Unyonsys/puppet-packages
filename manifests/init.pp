@@ -6,13 +6,13 @@
 # It will mostly contain libraries which might be used by multiple modules.
 #
 # The name we use as the package reference name is the Debian/Ubuntu like name.
-# 
+#
 # === Contact
 #
 # Bruno Leon <bruno.leon@unyonsys.com>
 #
 # === Copyright
-# 
+#
 # Copyright (C) 2011 Savoir-faire Linux Inc.
 # Copyright (C) 2012-2014 Unyonsys SARL
 #
@@ -22,6 +22,7 @@ class packages {
       $libdbd_mysql_perl  = 'perl-DBD-MySQL'
       $libdbi_perl        = 'libdbi-dbd-mysql'
       $libwww_perl        = 'perl-libwww-perl'
+      $libredis_perl      = 'perl-Redis'
       $phpmssql           = 'php-mssql'
       $php_xml            = 'php-xml'
       $php5_cli           = 'php-cli'
@@ -52,6 +53,7 @@ class packages {
     'libapache2-svn'           => $libapache2_svn,
     'libdbd-mysql-perl'        => $libdbd_mysql_perl,
     'libdbi-perl'              => $libdbi_perl,
+    'libredis-perl'            => $libredis_perl,
     'libmysql-ruby'            => $libmysql_ruby,
     'libnet-ldap-perl'         => $libnet_ldap_perl,
     'libdate-manip-perl'       => $libdate_manip_perl,
