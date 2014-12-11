@@ -71,6 +71,7 @@ class packages {
     'python-memcache'          => $python_memcache,
     'python-pip'               => $python_pip,
     'python-setuptools'        => $python_setuptools,
+    'python-redis'             => $python_redis,
     'rails'                    => $rails,
     'sysstat'                  => $sysstat,
     'sysvinit-utils'           => $sysvinit_utils,
