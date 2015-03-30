@@ -23,6 +23,7 @@ class packages {
       $libdbi_perl        = 'libdbi-dbd-mysql'
       $libwww_perl        = 'perl-libwww-perl'
       $libredis_perl      = 'perl-Redis'
+      $liboping0          = 'liboping'
       $phpmssql           = 'php-mssql'
       $php_xml            = 'php-xml'
       $php5_cli           = 'php-cli'
@@ -58,6 +59,7 @@ class packages {
     'libnet-ldap-perl'         => $libnet_ldap_perl,
     'libdate-manip-perl'       => $libdate_manip_perl,
     'libwww-perl'              => $libwww_perl,
+    'liboping0'                => $liboping0,
     'php-xml-parser'           => $php_xml_parser,
     'php5-pear'                => $php5_pear,
     'php5'                     => $php5,
