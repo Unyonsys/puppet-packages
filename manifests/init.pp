@@ -56,6 +56,7 @@ class packages {
     'python-pip'               => $python_pip,
     'python-setuptools'        => $python_setuptools,
     'python-redis'             => $python_redis,
+    'python-dev'               => $python_dev,
     'rails'                    => $rails,
     'sysstat'                  => $sysstat,
     'sysvinit-utils'           => $sysvinit_utils,
