@@ -38,6 +38,7 @@ class packages {
   }
 
   $packageshash = {
+    'gcc'                      => $gcc,
     'libactiverecord-ruby'     => $libactiverecord_ruby,
     'libapache2-mod-fastcgi'   => $libapache2_mod_fastcgi,
     'libapache2-mod-jk'        => $libapache2_mod_jk,
